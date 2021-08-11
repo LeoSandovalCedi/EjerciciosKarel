@@ -1,0 +1,61 @@
+iniciar-programa
+define-nueva-instruccion olaotravez(n) como 
+inicio
+si frente-libre entonces
+inicio
+avanza;
+olaotravez(sucede(n));
+fin;
+si frente-bloqueado o derecha-bloqueada entonces
+inicio
+gira-izquierda;
+repetir n veces inicio
+si junto-a-zumbador entonces inicio
+gira-izquierda;
+apagate;
+fin;
+si no-junto-a-zumbador y frente-libre entonces avanza;
+si frente-bloqueado entonces inicio
+repetir 3 veces gira-izquierda;
+apagate;
+fin;
+si junto-a-zumbador entonces inicio
+gira-izquierda;
+apagate;
+fin;
+fin;
+repetir 2 veces gira-izquierda;
+repetir n veces avanza;
+repetir n veces inicio
+si junto-a-zumbador entonces inicio
+repetir 3 veces gira-izquierda;
+apagate;
+fin;
+si no-junto-a-zumbador y frente-libre entonces avanza;
+si frente-bloqueado entonces inicio
+gira-izquierda;
+apagate;
+fin;
+fin;
+si junto-a-zumbador entonces inicio
+repetir 3 veces gira-izquierda;
+apagate;
+fin;
+si frente-bloqueado entonces inicio
+gira-izquierda;
+apagate;
+fin;
+si no-junto-a-zumbador y frente-libre entonces inicio
+gira-izquierda;
+apagate;
+fin;
+fin;
+fin;
+
+
+    inicia-ejecucion
+
+        olaotravez(0);
+        apagate;
+    termina-ejecucion
+finalizar-programa
